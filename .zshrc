@@ -5,7 +5,7 @@ export GPG_TTY=$(tty)
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Add local path executables
-export PATH=/home/cyborg/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -106,4 +106,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias l="k -a"
-alias config='/usr/bin/git --git-dir=/home/cyborg/.dotfiles/ --work-tree=/home/cyborg'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
