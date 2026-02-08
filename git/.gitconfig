@@ -1,0 +1,51 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Christian Cleberg
+	email = hello@cleberg.net
+	signingkey = hello@cleberg.net
+[core]
+	editor = emacs
+	autocrlf = input
+	untrackedCache = true
+
+[alias]
+	# Quick status and logs
+	st = status
+	co = checkout
+	br = branch
+	# A beautiful, readable graph log
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	# Undo the last commit but keep changes
+	uncommit = reset --soft HEAD~1
+	# Clean up merged branches
+	trim = !git branch --merged | grep -v '*' | xargs -n 1 git branch -d
+
+[color]
+	ui = auto
+
+[init]
+	defaultBranch = main
+
+[push]
+	# Push to the current branch by default
+	default = current
+	# Automatically setup remote tracking on first push
+	autoSetupRemote = true
+
+[pull]
+	# Avoid creating unnecessary merge commits when pulling
+	rebase = true
+
+[rebase]
+	# Automatically stash changes before rebasing and pop after
+	autoStash = true
+
+[diff]
+	# Use an algorithmic approach that produces more readable diffs
+	algorithm = histogram
+	# Detect renames better
+	renames = true
+
+[help]
+	# Correct typos automatically (0.5 second delay)
+	autocorrect = 5

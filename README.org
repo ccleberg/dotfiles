@@ -1,0 +1,53 @@
+* Overview
+This repository uses [[https://www.gnu.org/software/stow/][GNU Stow]] to manage dotfiles. Stow creates symbolic links
+from this directory to your home directory, keeping your configurations
+organized and version-controlled.
+
+* Directory Structure
+Each top-level directory represents a "package." For example, here's the
+baseline at the time of writing this README:
+
+| Program | Description                               |
+|---------+-------------------------------------------|
+| ~doom~    | Emacs configuration                       |
+| ~git~     | Git global configuration                  |
+| ~ispell~  | Dictionary and spellcheck settings        |
+| ~skhd~    | macOS hotkey daemon configuration         |
+| ~yabai~   | macOS tiling window manager configuration |
+| ~zsh~     | Shell configuration and plugins           |
+
+* Quick Start (Bootstrap)
+For a fresh installation, run the provided bootstrap script. It will check for
+Stow and link all packages automatically.
+
+#+begin_src bash
+chmod +x bootstrap.sh ./bootstrap.sh
+#+end_src
+
+* Manual Usage
+** Stow a package
+This creates the symlinks for a specific application.
+#+begin_src bash
+stow <package_name>
+#+end_src
+
+** Unstow a package
+This removes the symlinks.
+#+begin_src bash
+stow -D <package_name>
+#+end_src
+
+** Restow (Update links)
+Useful if you've added new files to a package and need to refresh the links.
+#+begin_src bash
+stow -R <package_name>
+#+end_src
+
+* Troubleshooting
+If you see a conflict error (e.g., ~* existing target is neither a link nor a
+directory~), it means a physical file already exists where Stow is trying to
+place a symlink.
+
+1. *Backup* the existing file: ~mv ~/.zshrc ~/.zshrc.bak~
+2. *Run* stow again: ~stow zsh~
+3. *Verify*: Check the link with ~ls -l ~/.zshrc~
