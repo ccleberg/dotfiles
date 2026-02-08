@@ -70,7 +70,6 @@
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
        markdown          ; writing docs for people to ignore
        (org +dragndrop   ; drag & drop images/files into org
-            +hugo        ; use this if you plan to use weblorg/hugo for your site
             +journal     ; daily logging
             +noter       ; for annotating PDFs (great for research)
             +roam2)      ; Zettelkasten note-taking
