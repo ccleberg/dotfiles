@@ -4,6 +4,7 @@
 	email = hello@cleberg.net
 	signingkey = hello@cleberg.net
 [core]
+	excludesfile = ~/.gitignore_global
 	editor = emacs
 	autocrlf = input
 	untrackedCache = true
