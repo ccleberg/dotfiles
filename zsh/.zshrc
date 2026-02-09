@@ -11,6 +11,10 @@ fi
 export PATH="/Users/cmc/.local/xonsh-env/xbin:$PATH"
 export GPG_TTY=$(tty)
 
+# borgbackup
+export BORG_CACHE_DIR="/tank/borg-cache"
+mkdir -p /tank/borg-cache
+
 # NVM Configuration
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
