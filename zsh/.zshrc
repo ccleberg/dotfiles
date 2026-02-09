@@ -23,6 +23,7 @@ fi
 # 3. ENVIRONMENT VARIABLES & PATH
 # ==============================================================================
 
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 export PATH="$HOME/.local/xonsh-env/xbin:$PATH"
 export PATH="$BRE_PREFIX:$PATH"
 export GPG_TTY=$(tty)
