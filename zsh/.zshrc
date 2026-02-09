@@ -1,14 +1,30 @@
 # ==============================================================================
-# 1. PRE-INITIALIZATION (Instant Prompt)
+# 1. OS-SPECIFIC CONFIGURATION
 # ==============================================================================
+
+# Use uname to detect the OS and set the correct Homebrew path
+if [[ "$(uname)" == "Darwin" ]]; then
+  # macOS (Apple Silicon)
+  BREW_PREFIX="/opt/homebrew"
+elif [[ "$(uname)" == "Linux" ]]; then
+  # Linux (Linuxbrew)
+  BREW_PREFIX="/home/linuxbrew/.linuxbrew"
+fi
+
+# ==============================================================================
+# 2. PRE-INITIALIZATION (Instant Prompt)
+# ==============================================================================
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # ==============================================================================
-# 2. ENVIRONMENT VARIABLES & PATH
+# 3. ENVIRONMENT VARIABLES & PATH
 # ==============================================================================
-export PATH="/Users/cmc/.local/xonsh-env/xbin:$PATH"
+
+export PATH="$HOME/.local/xonsh-env/xbin:$PATH"
+export PATH="$BRE_PREFIX:$PATH"
 export GPG_TTY=$(tty)
 
 # borgbackup
@@ -17,8 +33,15 @@ mkdir -p /tank/borg-cache
 
 # NVM Configuration
 export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+NVM_SH_PATH="$BREW_PREFIX/opt/nvm/nvm.sh"
+if [[ -s "$NVM_SH_PATH" ]]; then
+  source "$NVM_SH_PATH"
+fi
+
+NVM_BASH_COMPLETION_PATH="$BREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
+if [[ -s "$NVM_BASH_COMPLETION_PATH" ]]; then
+  source "$NVM_BASH_COMPLETION_PATH"
+fi
 
 # History Settings
 HISTFILE=~/.histfile
@@ -26,19 +49,24 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 # ==============================================================================
-# 3. COMPLETION & UI SETTINGS
+# 4. COMPLETION & UI SETTINGS
 # ==============================================================================
+
 bindkey -e
-zstyle :compinstall filename '/Users/cmc/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit && compinit
 
-# Load Theme
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+# p10k
+P10K_THEME_PATH="$BREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme"
+if [[ -f "$P10K_THEME_PATH" ]]; then
+  source "$P10K_THEME_PATH"
+fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # ==============================================================================
-# 4. ALIASES
+# 5. ALIASES
 # ==============================================================================
+
 alias l="ls -lha"
 alias emacs="emacs -nw"
 alias xclean="find . -name '.DS_Store' -type f -delete"
@@ -57,31 +85,31 @@ alias gcob='git checkout -b'
 alias gma='git checkout main'
 
 # ==============================================================================
-# 5. PLUGINS (Must be loaded after aliases for best results)
+# 6. PLUGINS (Must be loaded after aliases for best results)
 # ==============================================================================
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Syntax Highlighting MUST be the last thing sourced
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Zsh Autosuggestions
+ZSH_AUTOSUGGESTIONS_PATH="$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+if [[ -f "$ZSH_AUTOSUGGESTIONS_PATH" ]]; then
+  source "$ZSH_AUTOSUGGESTIONS_PATH"
+fi
+
+# Syntax Highlighting
+ZSH_SYNTAX_HIGHLIGHTING_PATH="$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+if [[ -f "$ZSH_SYNTAX_HIGHLIGHTING_PATH" ]]; then
+  source "$ZSH_SYNTAX_HIGHLIGHTING_PATH"
+fi
 
 # ==============================================================================
-# 6. SYNTAX HIGHLIGHTING CUSTOMIZATION
+# 7. SYNTAX HIGHLIGHTING CUSTOMIZATION
 # ==============================================================================
+
 # Must be defined AFTER the plugin is sourced
 # Colors available: black, red, green, yellow, blue, magenta, cyan, white
 # Styles: bold, underline
 
-# Highlight aliases in Cyan
 ZSH_HIGHLIGHT_STYLES[alias]='fg=cyan,bold'
-
-# Highlight standard commands in Green
 ZSH_HIGHLIGHT_STYLES[command]='fg=green'
-
-# Highlight built-ins (like cd, echo) in Magenta
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=magenta'
-
-# Highlight valid paths in White with an underline
 ZSH_HIGHLIGHT_STYLES[path]='fg=white,underline'
-
-# Highlight errors (typos) in Red
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red,bold'
