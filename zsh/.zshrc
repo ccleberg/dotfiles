@@ -48,8 +48,11 @@ fi
 
 # History Settings
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=30000
+SAVEHIST=30000
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
 
 # ==============================================================================
 # 4. COMPLETION & UI SETTINGS
