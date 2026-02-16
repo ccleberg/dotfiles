@@ -8,7 +8,10 @@
 	editor = emacs
 	autocrlf = input
 	untrackedCache = true
-
+[commit]
+	gpgsign = true
+[gpg]
+    program = gpg
 [alias]
 	# Quick status and logs
 	st = status
