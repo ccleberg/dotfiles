@@ -1,0 +1,32 @@
+# Taps
+tap "homebrew/bundle"
+tap "homebrew/services"
+tap "koekeishiya/formulae"
+
+# Formulae
+brew "stow"
+brew "gnupg"
+brew "pinentry-mac"
+brew "git"
+brew "ripgrep"
+brew "fzf"
+brew "bat"
+brew "fd"
+brew "yabai"
+brew "skhd"
+brew "ispell"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
+brew "powerlevel10k"
+brew "uv"
+brew "gh"
+brew "glab"
+
+# Casks
+cask "iterm2"
+cask "vscodium"
+cask "bitwarden"
+cask "mullvad-vpn"
+cask "signal"
+cask "syncthing"
+cask "font-fira-code-nerd-font"
