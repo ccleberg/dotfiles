@@ -27,3 +27,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Other
+wg.conf
+wg0.conf
