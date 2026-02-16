@@ -1,0 +1,10 @@
+services:
+  biblioreads:
+    container_name: biblioreads
+    image: docker.io/nesaku/biblioreads:latest
+    restart: unless-stopped
+    ports:
+      - "3030:3000"
+    environment:
+      - NEXT_PUBLIC_HOST_URL=http://br.cleberg.net
+      - NEXT_TELEMETRY_DISABLED=1

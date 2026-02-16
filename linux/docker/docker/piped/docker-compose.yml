@@ -1,0 +1,46 @@
+services:
+    frontend:
+        image: 1337kavin/piped-frontend:latest
+        restart: unless-stopped
+        depends_on:
+            - piped
+        environment:
+            BACKEND_HOSTNAME: pipedapi.cleberg.net
+            HTTP_MODE: https
+        ports:
+            - "8077:80"
+        container_name: piped-frontend
+
+    piped:
+        image: 1337kavin/piped:latest
+        restart: unless-stopped
+        volumes:
+            - ./config/config.properties:/app/config.properties:ro
+        depends_on:
+            - postgres
+        ports:
+            - "8078:8080"
+        container_name: piped-backend
+
+    proxy:
+        image: 1337kavin/piped-proxy:latest
+        restart: unless-stopped
+        ports:
+            - "8079:8080"
+        container_name: piped-proxy
+
+    bg-helper:
+        image: 1337kavin/bg-helper-server:latest
+        restart: unless-stopped
+        container_name: piped-bg-helper
+
+    postgres:
+        image: pgautoupgrade/pgautoupgrade:16-alpine
+        restart: unless-stopped
+        volumes:
+            - ./data/db:/var/lib/postgresql/data
+        environment:
+            - POSTGRES_DB=piped
+            - POSTGRES_USER=piped
+            - POSTGRES_PASSWORD=changeme
+        container_name: piped-postgres

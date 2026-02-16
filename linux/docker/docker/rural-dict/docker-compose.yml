@@ -1,0 +1,12 @@
+version: "3"
+services:
+  rural-dict:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - 2944:2944
+    environment:
+      - RD_PORT=2944
+      - RD_BIND=0.0.0.0

@@ -1,0 +1,5 @@
+services:
+  web:
+    image: shdv/hat.sh:latest
+    ports:
+      - 3991:80

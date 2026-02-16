@@ -1,0 +1,23 @@
+services:
+    anonymousoverflow:
+        container_name: 'app'
+        image: 'ghcr.io/httpjamesm/anonymousoverflow:release'
+        environment:
+            - APP_URL=https://ao.cleberg.net
+            - JWT_SIGNING_SECRET=
+            - FLARESOLVER=http://flaresolverr:8191
+            - TIMEOUT=120
+        ports:
+            - '9380:8080'
+        restart: 'always'
+
+    flaresolverr:
+      container_name: anonymous_overflow_flaresolverr
+      image:  ghcr.io/flaresolverr/flaresolverr:pr-1282
+      environment:
+          LOG_LEVEL: "info"
+          TZ: "America/Chicago"
+          LANG: "en_US"
+      security_opt:
+          - no-new-privileges:true
+      restart: unless-stopped
