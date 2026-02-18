@@ -72,7 +72,12 @@ fi
 # 5. ALIASES
 # ==============================================================================
 
-alias l="ls -lha"
+alias l='eza -lah --icons --git --group-directories-first --header'
+alias cd="z"
+alias cat="bat"
+alias mkdir="mkdir -p"
+alias grep="ripgrep"
+alias find="fd"
 alias emacs="emacs -nw"
 alias xclean="find . -name '.DS_Store' -type f -delete"
 
@@ -118,3 +123,7 @@ ZSH_HIGHLIGHT_STYLES[command]='fg=green'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[path]='fg=white,underline'
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red,bold'
+
+# zoxide
+eval "$(zoxide init zsh)"
+
