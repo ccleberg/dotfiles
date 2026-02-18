@@ -79,7 +79,7 @@ alias mkdir="mkdir -p"
 alias grep="ripgrep"
 alias find="fd"
 alias emacs="emacs -nw"
-alias xclean="find . -name '.DS_Store' -type f -delete"
+alias xclean="fd -H '.DS_Store' -t f -x rm"
 
 # Git
 alias g='git'
