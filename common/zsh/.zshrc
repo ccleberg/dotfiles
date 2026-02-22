@@ -76,7 +76,7 @@ alias l='eza -lah --icons --git --group-directories-first --header'
 alias cd="z"
 alias cat="bat --paging=never --theme=Coldark-Cold"
 alias mkdir="mkdir -p"
-alias grep="ripgrep"
+alias grep="rg"
 alias find="fd"
 alias emacs="emacs -nw"
 alias xclean="fd -H '.DS_Store' -t f -x rm"
