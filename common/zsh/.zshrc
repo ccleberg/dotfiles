@@ -74,7 +74,7 @@ fi
 
 alias l='eza -lah --icons --git --group-directories-first --header'
 alias cd="z"
-alias cat="bat --paging=never --theme=Coldark-Cold"
+alias cat="bat --paging=never"
 alias mkdir="mkdir -p"
 alias grep="rg"
 alias find="fd"
