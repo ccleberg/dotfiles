@@ -2,13 +2,26 @@
 # 1. OS-SPECIFIC CONFIGURATION
 # ==============================================================================
 
-# Use uname to detect the OS and set the correct Homebrew path
 if [[ "$(uname)" == "Darwin" ]]; then
-  # macOS (Apple Silicon)
-  BREW_PREFIX="/opt/homebrew"
+  # macOS - Check for custom path first, then standard paths
+  if [ -d "$HOME/Documents/.brew" ]; then
+    # Custom installation path
+    BREW_PREFIX="$HOME/Documents/.brew"
+  elif [ -d "/opt/homebrew" ]; then
+    # Standard path for Apple Silicon Macs
+    BREW_PREFIX="/opt/homebrew"
+  else
+    # Standard path for Intel Macs
+    BREW_PREFIX="/usr/local"
+  fi
 elif [[ "$(uname)" == "Linux" ]]; then
   # Linux (Linuxbrew)
   BREW_PREFIX="/home/linuxbrew/.linuxbrew"
+fi
+
+# If a Homebrew installation was found, add it to the shell environment
+if [ -n "$BREW_PREFIX" ]; then
+  eval "$($BREW_PREFIX/bin/brew shellenv)"
 fi
 
 # ==============================================================================
