@@ -66,6 +66,7 @@
        :lang
        data              ; config/data formats
        emacs-lisp        ; drown in parentheses
+       go
        json              ; At least it ain't XML
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
        markdown          ; writing docs for people to ignore
