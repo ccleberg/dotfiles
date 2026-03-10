@@ -145,7 +145,6 @@ ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red,bold'
 # zoxide
 eval "$(zoxide init zsh)"
 
-
 # bun completions
 [ -s "/Users/cmc/.bun/_bun" ] && source "/Users/cmc/.bun/_bun"
 
@@ -154,3 +153,6 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 alias claude-mem='/Users/cmc/.bun/bin/bun "/Users/cmc/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'
+
+# openssl
+export PATH="${HOMEBREW_PREFIX}/opt/openssl/bin:$PATH"
