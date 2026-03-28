@@ -53,3 +53,8 @@
 [help]
 	# Correct typos automatically (0.5 second delay)
 	autocorrect = 5
+[sendemail]
+	smtpserver = smtp.soverin.net
+	smtpuser = hello@cleberg.net
+	smtpencryption = ssl
+	smtpserverport = 465

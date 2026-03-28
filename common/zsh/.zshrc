@@ -37,6 +37,8 @@ fi
 # ==============================================================================
 
 export PATH="$HOME/.local/xonsh-env/xbin:$PATH"
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 export PATH="$BREW_PREFIX/bin:$PATH"
 export GPG_TTY=$(tty)
 
@@ -94,6 +96,7 @@ alias grep="rg"
 alias find="fd"
 alias emacs="emacs -nw"
 alias xclean="fd -H '.DS_Store' -t f -x rm"
+alias python="python3"
 
 # Git
 alias g='git'
