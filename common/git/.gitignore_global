@@ -21,6 +21,7 @@
 *~
 .vscode/
 .idea/
+.claude/
 
 # Common logs
 *.log
