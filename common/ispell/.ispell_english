@@ -8235,6 +8235,7 @@ cloture/MS
 cloud/DGMS
 cloudburst/MS
 clouded/U
+Cloudflare
 cloudiness/M
 cloudless
 cloudy/PRT
@@ -29154,6 +29155,7 @@ NF
 NFC
 NFL/M
 Ngaliema/M
+Nginx
 Nguyen/M
 NH
 NHL/M
@@ -40400,7 +40402,7 @@ soupy/RT
 sour/DGMPRSTY
 source/ADGMS
 Sourceforge/M
-Sourcehut
+sourcehut
 Sourcehut's
 sourdough/M
 sourdoughs
@@ -40965,6 +40967,7 @@ SS
 SSA
 SSE/M
 ssh
+SSL
 SSS
 SST
 SSW/M
@@ -43963,6 +43966,7 @@ Tl/M
 Tlaloc/M
 TLC/M
 Tlingit/M
+TLS
 Tm/M
 tn
 tnpk
@@ -48468,6 +48472,7 @@ Zephyrhills/M
 Zephyrus/M
 zeppelin/MS
 zero/DGHMS
+Zerobyte
 zeroes
 zest/MS
 zestful/PY
