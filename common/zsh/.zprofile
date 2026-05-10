@@ -5,6 +5,8 @@
 if [[ "$(uname)" == "Darwin" ]]; then
   # macOS (Apple Silicon)
   BREW_PATH="/opt/homebrew/bin/brew"
+  # Display Message of the Day (MOTD)
+  ./motd.sh
 elif [[ "$(uname)" == "Linux" ]]; then
   # Linux (Linuxbrew)
   BREW_PATH="/home/linuxbrew/.linuxbrew/bin/brew"
