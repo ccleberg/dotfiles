@@ -7,6 +7,8 @@ if [[ "$(uname)" == "Darwin" ]]; then
   if [ -d "$HOME/Documents/.brew" ]; then
     # Custom installation path
     BREW_PREFIX="$HOME/Documents/.brew"
+    # Created by `pipx` on 2026-03-25 16:52:28
+    export PATH="$PATH:/Users/ccleberg/.local/bin"
   elif [ -d "/opt/homebrew" ]; then
     # Standard path for Apple Silicon Macs
     BREW_PREFIX="/opt/homebrew"
