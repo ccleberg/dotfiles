@@ -53,14 +53,31 @@ fi
 # NVM Configuration
 export NVM_DIR="$HOME/.nvm"
 NVM_SH_PATH="$BREW_PREFIX/opt/nvm/nvm.sh"
-if [[ -s "$NVM_SH_PATH" ]]; then
-  source "$NVM_SH_PATH"
-fi
 
-NVM_BASH_COMPLETION_PATH="$BREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
-if [[ -s "$NVM_BASH_COMPLETION_PATH" ]]; then
-  source "$NVM_BASH_COMPLETION_PATH"
-fi
+_load_nvm() {
+  unset -f nvm node npm npx
+  [[ -s "$NVM_SH_PATH" ]] && source "$NVM_SH_PATH"
+}
+
+nvm() {
+  _load_nvm
+  nvm "$@"
+}
+
+node() {
+  _load_nvm
+  node "$@"
+}
+
+npm() {
+  _load_nvm
+  npm "$@"
+}
+
+npx() {
+  _load_nvm
+  npx "$@"
+}
 
 # History Settings
 HISTFILE=~/.histfile
@@ -77,7 +94,8 @@ setopt HIST_REDUCE_BLANKS
 
 bindkey -e
 zstyle :compinstall filename "$HOME/.zshrc"
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+compinit -C
 
 # p10k
 P10K_THEME_PATH="$BREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme"
