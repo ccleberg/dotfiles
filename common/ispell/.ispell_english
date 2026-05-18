@@ -789,6 +789,7 @@ agency/MS
 agenda/MS
 agenesis
 agent/AMS
+Agentspace
 ageratum/M
 Aggie/M
 agglomerate/DGMNSX
@@ -892,6 +893,7 @@ aimless/PY
 aimlessness/M
 ain't
 Ainu/M
+aIQ
 air/DGJMS
 airbag/MS
 airbase/MS
@@ -2898,6 +2900,7 @@ Australopithecus/M
 Austria/M
 Austrian/MS
 Austronesian/M
+auth
 authentic/IU
 authentically
 authenticate/DGNSX
@@ -6168,6 +6171,7 @@ caff/CS
 caffeinated
 caffeine/M
 caftan/MS
+CAG
 cage/DGMS
 cagey
 cagier
@@ -7000,6 +7004,7 @@ CD/MS
 CDC
 CDT
 Ce/M
+CEACs
 cease/CDGMS
 ceasefire/MS
 ceaseless/PY
@@ -7083,6 +7088,8 @@ Centaurus/M
 centavo/MS
 centenarian/MS
 centenary/MS
+Centene
+Centene's
 centennial/MSY
 center/DGM
 centerboard/MS
@@ -7145,6 +7152,7 @@ certifiably
 certificate/DGMNSX
 certification/M
 certify/DGS
+Certinia
 certitude/IM
 certitudes
 cerulean/M
@@ -7915,6 +7923,7 @@ cirrhotic/MS
 cirri
 cirrus/M
 cis
+CISA
 Cisco/M
 cisgender
 cistern/MS
@@ -8120,6 +8129,7 @@ clever/PRTY
 cleverness/M
 clevis/MS
 clew/DGMS
+CLI
 Cliburn/M
 cliche/DMS
 click/BDGMRSZ
@@ -8291,6 +8301,7 @@ Clytemnestra/M
 cm
 Cm/M
 Cmdr
+CNC
 cnidarian/MS
 CNN/M
 CNS/M
@@ -10392,6 +10403,7 @@ crystallization/M
 crystallize/ADGS
 crystallographic
 crystallography
+CSG
 Csonka/M
 CSS/M
 CST/M
@@ -11174,6 +11186,7 @@ defenestration/S
 defense/DGMSV
 defenseless/PY
 defenselessness/M
+defensibility
 defensible/I
 defensibly/I
 defensive/MPY
@@ -13389,6 +13402,7 @@ Edwardo/M
 Edwards/M
 Edwin/M
 Edwina/M
+EE
 EEC/M
 EEG/M
 eek
@@ -13690,6 +13704,7 @@ eloquence/M
 eloquent/Y
 Eloy/M
 Elroy/M
+ELs
 Elsa/M
 else
 elsewhere
@@ -14907,6 +14922,7 @@ expend/BDGS
 expendable/MS
 expenditure/MS
 expense/MS
+Expensify
 expensive/IPY
 expensiveness/IM
 experience/DIM
@@ -16969,6 +16985,7 @@ frustum/MS
 fry/DGMS
 Frye/M
 fryer/MS
+FSA
 FSF/M
 FSLIC
 ft
@@ -17834,8 +17851,12 @@ Giselle/M
 Gish/M
 gist/M
 git/S
+GITC
+GITCs
 gite/S
 GitHub/M
+GitLab
+GitLab's
 Giuliani/M
 Giuseppe/M
 give/GJRSZ
@@ -21010,6 +21031,7 @@ idolatrous
 idolatry/M
 idolization/M
 idolize/DGS
+IDs
 idyll/MS
 idyllic
 idyllically
@@ -22545,6 +22567,8 @@ Isuzu/M
 it/MSU
 it'd
 it'll
+ITAC
+ITACs
 Itaipu/M
 ital
 Italian/MS
@@ -22555,6 +22579,7 @@ italicize/DGS
 italics/M
 Italy/M
 Itasca/M
+ITCC
 itch/DGMS
 itchiness/M
 itchy/PRT
@@ -23778,6 +23803,7 @@ kowtow/DGMS
 KP
 kph
 KPIs
+KPMG
 Kr/M
 kraal/MS
 Kraft/M
@@ -23853,6 +23879,7 @@ Kwakiutl/M
 Kwan/M
 Kwangju/M
 Kwanzaa/MS
+Kweku
 kWh
 Ky/HM
 Kyle/M
@@ -23957,6 +23984,7 @@ Laius/M
 Lajos/M
 lake/MS
 lakefront/S
+Lakehouse
 Lakeisha/M
 Lakeland/M
 lakeside
@@ -27887,6 +27915,7 @@ moneylender/MS
 moneymaker/MS
 moneymaking/M
 monger/DGMS
+Mongo
 MongoDB/M
 Mongol/MS
 mongol/S
@@ -28970,6 +28999,7 @@ Nelda/M
 Nell/M
 Nellie/M
 Nelly/M
+Nelnet
 Nelsen/M
 nelson/MS
 nematode/MS
@@ -29777,6 +29807,7 @@ notch/DGMS
 note/CDFGS
 note's
 notebook/MS
+NotebookLM
 notelet/S
 notepad/S
 notepaper/M
@@ -30543,6 +30574,7 @@ option/DGMS
 optional/Y
 optometrist/MS
 optometry/M
+Optro
 opulence/M
 opulent/Y
 opus/MS
@@ -32172,6 +32204,7 @@ peon/MS
 peonage/M
 peony/MS
 people/DGMS
+PeopleSoft
 Peoria/M
 pep/MS
 Pepin/M
@@ -33258,6 +33291,7 @@ plywood/M
 Pm/M
 pm
 PM/DGMS
+PML
 PMS/M
 pneumatic
 pneumatically
@@ -34595,6 +34629,7 @@ pseudonymous
 pseudoscience/MS
 pseudy
 pshaw/MS
+PSHP
 psi/MS
 psittacosis/M
 psoriasis/M
@@ -34904,6 +34939,7 @@ pvt
 PW
 pwn/DGS
 PX
+PY
 pyelonephritis
 Pygmalion/M
 pygmy/MS
@@ -34953,6 +34989,7 @@ Qinghai/M
 Qiqihar/M
 QM
 Qom/M
+QP
 qr
 qt/S
 qty
@@ -36711,6 +36748,7 @@ Rizal/M
 rm
 Rn/M
 RNA/M
+RNs
 roach/DGMS
 road/IMS
 roadbed/MS
@@ -38178,6 +38216,7 @@ Scythia/M
 Scythian/M
 SD
 SDI
+SDM
 Se/HM
 sea/MS
 seabed/MS
@@ -39325,6 +39364,7 @@ signification/M
 signify/DGNSX
 signing's/C
 signings
+signoff
 signor/FMS
 signora/MS
 signore
@@ -44004,6 +44044,7 @@ Todd/M
 toddle/DGMRSZ
 toddler/M
 toddy/MS
+TODO
 toe/DMS
 toecap/MS
 TOEFL
@@ -45134,6 +45175,7 @@ twosome/MS
 twp
 TWX
 TX
+TXT
 Ty/M
 Tycho/M
 tycoon/MS
@@ -46019,6 +46061,7 @@ Valkyrie/MS
 Vallejo/M
 Valletta/M
 valley/MS
+Valmont
 Valois/M
 valor/M
 valorous/Y
@@ -47964,6 +48007,8 @@ workmanship/M
 workmate/S
 workmen
 workout/MS
+workpaper
+workpapers
 workplace/MS
 workroom/MS
 works/M
