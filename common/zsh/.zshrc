@@ -118,6 +118,7 @@ alias emacs="emacs -nw"
 alias xclean="fd -H '.DS_Store' -t f -x rm"
 alias python="python3"
 alias docker-update='for d in ~/docker/*/; do (cd "$d" && sudo docker compose pull && sudo docker compose up -d); done'
+alias doom="~/.config/emacs/bin/doom"
 
 # Git
 alias g='git'

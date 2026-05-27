@@ -3,3 +3,4 @@
 
 (package! htmlize)
 (package! weblorg)
+(package! olivetti)
