@@ -1,6 +1,4 @@
 # Taps
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "koekeishiya/formulae"
 
 # Formulae
@@ -12,8 +10,8 @@ brew "ripgrep"
 brew "fzf"
 brew "bat"
 brew "fd"
-brew "yabai"
-brew "skhd"
+brew "koekeishiya/formulae/yabai"
+brew "koekeishiya/formulae/skhd"
 brew "ispell"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"

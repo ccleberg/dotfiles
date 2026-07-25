@@ -17,7 +17,7 @@ brew bundle --file="$MACOS_DIR/Brewfile"
 
 # Restart services to ensure they pick up any stowed config changes
 echo "♻️  Restarting services..."
-brew services restart yabai
-brew services restart skhd
+brew services restart koekeishiya/formulae/yabai
+brew services restart koekeishiya/formulae/skhd
 
 echo "✅ macOS environment synced."

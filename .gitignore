@@ -1,0 +1,9 @@
+common/gnupg/.gnupg/pubring.kbx~
+common/gnupg/.gnupg/S.gpg-agent.extra
+common/gnupg/.gnupg/trustdb.gpg
+common/gnupg/.gnupg/private-keys-v1.d
+common/gnupg/.gnupg/S.gpg-agent
+common/gnupg/.gnupg/S.gpg-agent.ssh
+common/gnupg/.gnupg/pubring.kbx
+common/gnupg/.gnupg/S.gpg-agent.browser
+common/gnupg/.gnupg/S.scdaemon
