@@ -177,3 +177,4 @@ alias claude-mem='/Users/cmc/.bun/bin/bun "/Users/cmc/.claude/plugins/marketplac
 
 # openssl
 export PATH="${HOMEBREW_PREFIX}/opt/openssl/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
