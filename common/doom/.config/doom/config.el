@@ -132,3 +132,7 @@
 ;; Map time report to keybindings
 (map! :leader
       :desc "Generate time report" "z t" #'tr/time-report-interactive)
+
+(add-to-list 'load-path "/path/to/srht.el")
+(autoload 'srht-trackers "srht" "List SourceHut trackers." t)
+(autoload 'srht-version "srht" "Show SourceHut API versions." t)

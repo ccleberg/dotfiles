@@ -1949,6 +1949,7 @@ anywhere
 anywise
 Anzac/M
 ANZUS/M
+AOC
 AOL/M
 aorta/MS
 aortic
@@ -10697,6 +10698,7 @@ dabber/MS
 dabbing
 dabble/DGRSZ
 dabbler/M
+DAC
 dace/MS
 dacha/MS
 Dachau/M
@@ -14520,6 +14522,7 @@ Ethelred/M
 ether/M
 ethereal/Y
 Ethereum
+Etherlighting
 Ethernet/M
 ethic/MS
 ethical/UY
@@ -15198,6 +15201,7 @@ faience/M
 fail/DGJS
 failing/M
 faille/M
+failover
 failure/MS
 fain/RT
 faint/DGMPRSTY
@@ -17486,6 +17490,7 @@ gazillion/S
 gazpacho/M
 gazump/DGS
 GB/M
+Gbps
 GCC/M
 Gd/M
 Gdansk/M
@@ -19436,6 +19441,7 @@ hazmat
 hazy/PRT
 HBase/M
 HBO/M
+HD
 HDD
 HDMI
 hdqrs
@@ -20234,6 +20240,7 @@ homeboy/MS
 Homebrew
 homecoming/MS
 homegrown
+homelab
 homeland/MS
 homeless/MP
 homelessness/M
@@ -26570,6 +26577,7 @@ Mb/M
 MBA/M
 Mbabane/M
 Mbini/M
+Mbps
 MC
 McAdam/M
 McAllen/M
@@ -29199,6 +29207,7 @@ nib/MS
 nibble/DGMRSZ
 nibbler/M
 Nibelung/M
+NIC
 Nicaea/M
 Nicaragua/M
 Nicaraguan/MS
@@ -29229,6 +29238,7 @@ Nicolas/M
 Nicole/M
 Nicosia/M
 nicotine/M
+NICs
 Niebuhr/M
 niece/MS
 Nielsen/M
@@ -31968,6 +31978,7 @@ PC/MS
 PCAOB
 PCB
 PCI
+PCIe
 PCMCIA
 PCP/M
 pct
@@ -33325,6 +33336,7 @@ podiatry/M
 podium/MS
 Podunk/M
 Poe/M
+PoE
 poem/MS
 poesy/M
 poet/MS
@@ -36745,6 +36757,7 @@ rivulet/MS
 Riyadh/M
 riyal/MS
 Rizal/M
+RJ
 rm
 Rn/M
 RNA/M
@@ -38765,6 +38778,7 @@ Seychelles/M
 Seyfert/M
 Seymour/M
 sf
+SFP
 SFTP
 SGML/M
 Sgt
@@ -45248,6 +45262,7 @@ Uccello/M
 UCLA/M
 Udall/M
 udder/MS
+UDM
 Ufa/M
 UFO/MS
 ufologist/MS
@@ -45594,6 +45609,7 @@ Unicode/M
 unicorn/MS
 unicycle/MS
 unidirectional
+UniFi
 unification/AM
 uniform/DGMSY
 uniformity/M
@@ -45950,6 +45966,7 @@ usurp/DGRSZ
 usurpation/M
 usurper/M
 usury/M
+USW
 Ut
 UT/M
 Utah/M
@@ -48193,6 +48210,7 @@ xerographic
 xerography/M
 xerox/DGMS
 Xerxes/M
+XG
 Xhosa/M
 xi/MS
 Xi'an/M
@@ -48530,6 +48548,7 @@ zestfulness/M
 zesty/RT
 zeta/MS
 Zeus/M
+ZFS
 Zhdanov
 Zhejiang/M
 Zhengzhou/M
