@@ -58,3 +58,5 @@
 	smtpuser = hello@cleberg.net
 	smtpencryption = ssl
 	smtpserverport = 465
+[safe]
+	directory = /git/krz/hn.git
