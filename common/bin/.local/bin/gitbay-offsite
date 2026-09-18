@@ -1,0 +1,38 @@
+#!/bin/bash
+# Retention and recovery for the gitbay offsite restic repository.
+#
+# bay1 backs up nightly with append-only credentials and cannot remove
+# snapshots or prune. That work runs from here, with a privileged key.
+
+set -euo pipefail
+
+ENV_FILE=${GITBAY_OFFSITE_ENV:-$HOME/.config/gitbay/offsite.env}
+
+command -v restic >/dev/null || { echo "restic not installed: brew install restic" >&2; exit 1; }
+[[ -r $ENV_FILE ]] || { echo "cannot read $ENV_FILE" >&2; exit 1; }
+set -a; . "$ENV_FILE"; set +a
+: "${RESTIC_REPOSITORY:?not set in $ENV_FILE}"
+: "${RESTIC_PASSWORD:?not set in $ENV_FILE}"
+
+r() { restic ${RESTIC_OPTS:-} "$@"; }
+
+case "${1:-status}" in
+status)
+	r snapshots
+	r stats --mode raw-data
+	;;
+prune)
+	r forget --tag gitbay --prune \
+		--keep-daily 7 --keep-weekly 4 --keep-monthly 6
+	;;
+verify)
+	r check --read-data-subset=5%
+	;;
+restore)
+	[[ $# -eq 2 ]] || { echo "usage: gitbay-offsite restore <target-dir>" >&2; exit 2; }
+	r restore latest --target "$2"
+	;;
+*)
+	r "$@"
+	;;
+esac

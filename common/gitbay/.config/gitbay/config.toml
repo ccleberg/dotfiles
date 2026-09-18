@@ -1,0 +1,6 @@
+default = "gitbay"
+
+[instances]
+  [instances.gitbay]
+    host = "gitbay.org"
+    port = 0

@@ -8,3 +8,6 @@ common/gnupg/.gnupg/pubring.kbx
 common/gnupg/.gnupg/S.gpg-agent.browser
 common/gnupg/.gnupg/S.scdaemon
 linux/nginx/etc/nginx/GeoLite2-City.mmdb
+.#*
+!common/claude/CLAUDE.md
+!common/claude/.claude/
