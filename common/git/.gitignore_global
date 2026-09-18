@@ -23,6 +23,10 @@
 .idea/
 .claude/
 
+# LLMs
+CLAUDE.md
+AGENTS.md
+
 # Common logs
 *.log
 npm-debug.log*

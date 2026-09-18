@@ -181,3 +181,9 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Rust / cargo binaries
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# ambient-companions: terminal collector, shell side. Counts keystrokes and
+# session seconds and appends them as numbers to a spool signald reads. It
+# never reads the line buffer or captures argv.
+[[ -r "${HOMEBREW_PREFIX:-/opt/homebrew}/share/ambient-companions/signald-hooks.zsh" ]] &&
+  source "${HOMEBREW_PREFIX:-/opt/homebrew}/share/ambient-companions/signald-hooks.zsh"
